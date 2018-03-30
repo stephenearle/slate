@@ -6,6 +6,7 @@ language_tabs: # must be one of https://git.io/vQNgJ
   - ruby
   - python
   - javascript
+  - php
 
 toc_footers:
   - <a href='#'>Sign Up for a Developer Key</a>
@@ -24,6 +25,58 @@ Welcome to the Kittn API! You can use our API to access Kittn API endpoints, whi
 We have language bindings in Shell, Ruby, and Python! You can view code examples in the dark area to the right, and you can switch the programming language of the examples with the tabs in the top right.
 
 This example API documentation page was created with [Slate](https://github.com/lord/slate). Feel free to edit it and use it as a base for your own API's documentation.
+
+
+# Installation
+
+Create account and MySQL db
+
+CD to the project ROOT.
+
+`$ cd /home/project`
+
+Initialize git repository
+
+`$ git init`
+
+Pull Repo using your bitbucket username
+
+`$ git pull https://{YOUR-USERNAME}}@bitbucket.org/steveearle/ignite5.git`
+
+Rename ignite_config_sample.php to ignite_config.php and edit the database details
+
+`mv ignite_config_sample.php ignite_config.php`
+
+`nano ignite_config.php`
+
+Install the database, make sure you’re in the project root i.e /home/project
+`$ php -f ignite_install_db.php`
+
+
+Change permissions on /public_html/ignite/uploads/images & docs
+`$ chmod 777 public_html/ignite/uploads/images`
+`$ chmod 777 public_html/ignite/uploads/docs`
+
+You need a domain name - park one if needed
+
+Navigate to the Admin to config the account - fluid staff created as users
+http://your-site/adminign
+
+10. Create the account and associated users.
+
+11. Then create a home page with URL of /
+
+# Ignite plugins
+
+Some stuff about plugins
+
+## Config options
+
+Parameter | Default | Options
+--------- | ------- | -----------
+list_page | false   | Boolean
+type      | null    | text, image, tags, checkboxes
+
 
 # Authentication
 
